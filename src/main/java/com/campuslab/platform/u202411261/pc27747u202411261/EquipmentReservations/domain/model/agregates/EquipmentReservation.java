@@ -31,6 +31,16 @@ public class EquipmentReservation extends AbstractDomainAggregateRoot<EquipmentR
         this.laboratoryId = laboratoryId;
         this.reservationCode = reservationCode;
         this.id = id;
+
     }
 
+    public EquipmentReservation(ReservationCode reservationCode, LaboratoryId laboratoryId, ReservationPeriod reservationPeriod, EquipmentBatch equipmentBatch, Integer accessLevel, ReservationStatus status) {
+        this.reservationCode = reservationCode;
+        this.laboratoryId = laboratoryId;
+        this.reservationPeriod = reservationPeriod;
+        this.equipmentBatch = equipmentBatch;
+        this.accessLevel = accessLevel;
+        this.status = status;
+
+    }
 }
